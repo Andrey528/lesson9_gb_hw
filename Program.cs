@@ -1,20 +1,20 @@
-﻿//Console.WriteLine($"Задайте значение N. Напишите программу, которая выведет все натуральные " +
-//    "числа в промежутке от N до 1. Выполнить с помощью рекурсии");
+﻿Console.WriteLine($"Задайте значение N. Напишите программу, которая выведет все натуральные " +
+    "числа в промежутке от N до 1. Выполнить с помощью рекурсии");
 
-//int n;
+int n;
 
-//Console.WriteLine($"Задайте значение N");
-//int.TryParse(Console.ReadLine()!, out n);
+Console.WriteLine($"Задайте значение N");
+int.TryParse(Console.ReadLine()!, out n);
 
-//void nat_numbers(int number)
-//{
-//    Console.Write($"{number}, ");
-//    if (number == 1) return;
-//    else nat_numbers(number - 1);
-//}
+void nat_numbers(int number)
+{
+    Console.Write($"{number}, ");
+    if (number == 1) return;
+    else nat_numbers(number - 1);
+}
 
-//nat_numbers(n);
-//Console.WriteLine();
+nat_numbers(n);
+Console.WriteLine();
 
 //-------------------------------------------------------------------------------------
 
@@ -44,26 +44,24 @@ Console.WriteLine($"Сумма = {print_numbers_in_borders(left_border, right_bo
 
 //-----------------------------------------------------------------------------------
 
-//Console.WriteLine($"Напишите программу вычисления функции Аккермана с помощью рекурсии. " +
-//    $"Даны два неотрицательных числа m и n.");
+Console.WriteLine($"Напишите программу вычисления функции Аккермана с помощью рекурсии. " +
+    $"Даны два неотрицательных числа m и n.");
 
-//int funcAckerman(int m, int n)
-//{
-//    //if (m == 0)
-//    //    return n + 1;
-//    if (m > 0 && n == 0) 
-//        return funcAckerman(m - 1, 1);
-//    else if (m > 0 && n > 0)
-//        return funcAckerman(m - 1, funcAckerman(m, n - 1));
-//    else return n + 1;
-//}
+int funcAckerman(int m, int n)
+{
+    if (m > 0 && n == 0)
+        return funcAckerman(m - 1, 1);
+    else if (m > 0 && n > 0)
+        return funcAckerman(m - 1, funcAckerman(m, n - 1));
+    else return n + 1;
+}
 
-//int first_number, second_number;
+int first_number, second_number;
 
-//Console.WriteLine($"Задайте значение m для функции Аккермана");
-//int.TryParse(Console.ReadLine()!, out first_number);
-//Console.WriteLine($"Задайте значение n для функции Аккермана");
-//int.TryParse(Console.ReadLine()!, out second_number);
+Console.WriteLine($"Задайте значение m для функции Аккермана");
+int.TryParse(Console.ReadLine()!, out first_number);
+Console.WriteLine($"Задайте значение n для функции Аккермана");
+int.TryParse(Console.ReadLine()!, out second_number);
 
-//Console.WriteLine($"Функция Аккермана от m = {first_number} и n = {second_number} " +
-//    $"равна {funcAckerman(first_number, second_number)}");
+Console.WriteLine($"Функция Аккермана от m = {first_number} и n = {second_number} " +
+    $"равна {funcAckerman(first_number, second_number)}");
